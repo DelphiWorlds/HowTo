@@ -18,6 +18,8 @@ If you encounter an issue, or want to request an enhancement, please [visit the 
 
 The Delphi Worlds Slack workspace has a channel (#kastri) devoted to discussing Kastri, however this channel can also be used to discuss How To topics.
 
+If you would like to join the Delphi Worlds Slack workspace, [please visit this self-invite link](https://slack.delphiworlds.com)
+
 ## License
 
 How To is licensed under MIT, and the license file is included in this folder.
