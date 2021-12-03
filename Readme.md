@@ -4,6 +4,10 @@
 
 A collection of demos and code designed to illustrate "how to" do various things, particularly when using the [Kastri library](https://github.com/DelphiWorlds/Kastri).
 
+## Project configuration
+
+Demos and other projects that depend on the Kastri library have search paths that include an environment variable user override named `Kastri` (appears as `$(Kastri)` in the paths). Either create a user override with the same name which points to your copy of Kastri, or replace the values with the appropriate path.
+
 ## Support
 
 ### Issues page
