@@ -1,0 +1,31 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 557
+  ClientWidth = 407
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Memo: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 407.000000000000000000
+    Size.Height = 512.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 403.000000000000000000
+    Viewport.Height = 508.000000000000000000
+  end
+  object CrashButton: TButton
+    Align = Top
+    Size.Width = 407.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Crash Me!'
+    OnClick = CrashButtonClick
+  end
+end
