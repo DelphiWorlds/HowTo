@@ -1,0 +1,73 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 600
+  ClientWidth = 459
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Memo: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 459.000000000000000000
+    Size.Height = 563.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 455.000000000000000000
+    Viewport.Height = 559.000000000000000000
+  end
+  object Layout1: TLayout
+    Align = Top
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Size.Width = 459.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object StartButton: TButton
+      Align = Left
+      Position.X = 4.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 93.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Start'
+      OnClick = StartButtonClick
+    end
+    object SendButton: TButton
+      Align = Right
+      Position.X = 362.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 93.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Send'
+      OnClick = SendButtonClick
+    end
+    object Layout2: TLayout
+      Align = Client
+      Margins.Left = 12.000000000000000000
+      Margins.Right = 4.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object CommandEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = VertCenter
+        TabOrder = 0
+        Position.Y = 3.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+end
