@@ -6,7 +6,7 @@ Demonstrates the use of the [TRunProcess in DW.RunProcess.Android](https://githu
 
 ## Note
 
-This is a work in progress. It was intended as a possible solution for executing the [Stockfish](https://stockfishchess.org) executable as per this enquiry on Delphi Praxis, however it is yet to work successfully. It should work for at least any basic commands, as per the code in the demo.
+This is a work in progress. It was intended as a possible solution for executing the [Stockfish](https://stockfishchess.org) executable as per [this enquiry on Delphi Praxis](https://en.delphipraxis.net/topic/5961-is-there-analog-of-cs-in-firemonkey), however it is yet to work successfully. It should work for at least any basic commands, as per the code in the demo.
 
 If anyone is able to help make it work with Stockfish, please lodge suggestions via the [issues page](https://github.com/DelphiWorlds/HowTo/issues).
 
