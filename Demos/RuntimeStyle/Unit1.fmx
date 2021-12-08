@@ -1,0 +1,142 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 649
+  ClientWidth = 440
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Top
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Size.Width = 440.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 354.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Switch'
+      TabOrder = 0
+    end
+    object Switch1: TSwitch
+      Align = Right
+      IsChecked = False
+      Position.X = 358.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+  end
+  object Layout2: TLayout
+    Align = Top
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Position.Y = 37.000000000000000000
+    Size.Width = 440.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Label2: TLabel
+      Align = Client
+      Size.Width = 205.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Edit'
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Right
+      TabOrder = 1
+      Position.X = 209.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 227.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Layout3: TLayout
+    Align = Top
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Position.Y = 74.000000000000000000
+    Size.Width = 440.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label3: TLabel
+      Align = Client
+      Size.Width = 329.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Button'
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Align = Right
+      Position.X = 333.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 103.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Button1'
+    end
+  end
+  object Layout4: TLayout
+    Align = Top
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Position.Y = 111.000000000000000000
+    Size.Width = 440.000000000000000000
+    Size.Height = 198.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label4: TLabel
+      Align = Client
+      Size.Width = 432.000000000000000000
+      Size.Height = 190.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.VertAlign = Leading
+      Text = 'ListBox'
+      TabOrder = 0
+      object ListBox1: TListBox
+        Align = Right
+        Position.X = 232.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 190.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        DisableFocusEffect = True
+        Items.Strings = (
+          'One'
+          'Two'
+          'Three'
+          'Four'
+          'Five'
+          'Six')
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 196.000000000000000000
+        Viewport.Height = 186.000000000000000000
+      end
+    end
+  end
+end
