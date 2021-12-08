@@ -30,7 +30,7 @@ The steps to convert are:
 
 `.fsf` files are the binary version of FMX styles, and are what will be deployed with the app (see the Configuration section, below) 
 
-Use the [`StyleToFSF` tool from Kastri]() to convert the `.style` file to a `.fsf` file, e.g.:
+Use the [`StyleToFSF` tool from Kastri](https://github.com/DelphiWorlds/Kastri/blob/master/Tools/StyleToFSF.exe) to convert the `.style` file to a `.fsf` file, e.g.:
 ```
   StyleToFSF MyStyle.style MyStyle.fsf
 ```
