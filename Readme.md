@@ -6,6 +6,10 @@ A collection of demos and code designed to illustrate "how to" do various things
 
 Compatible with [Embarcadero](https://wwww.embarcadero.com) [Delphi](https://www.embarcadero.com/products/delphi)
 
+From Delphi Worlds:
+
+[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=plastic&logo=Twitter)](https://twitter.com/DelphiWorlds)  [![Facebook](https://img.shields.io/badge/-Facebook-green?style=plastic&logo=Facebook)](https://www.facebook.com/DelphiWorlds)  [![Instagram](https://img.shields.io/badge/-Instagram-833AB4?style=plastic&logo=Instagram)](https://www.instagram.com/delphiworlds)
+
 ## Project configuration
 
 Demos and other projects that depend on the Kastri library have search paths that include an environment variable user override named `Kastri` (appears as `$(Kastri)` in the paths). Either create a user override with the same name which points to your copy of Kastri, or replace the values with the appropriate path.
