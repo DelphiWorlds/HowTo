@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{89816462-D8BE-414A-95AE-C6208F81E2A8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Application\GenericJob.dproj">
+            <Dependencies>Service\GenericJobService.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Service\GenericJobService.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GenericJob" DependsOnTargets="GenericJobService">
+        <MSBuild Projects="Application\GenericJob.dproj"/>
+    </Target>
+    <Target Name="GenericJob:Clean" DependsOnTargets="GenericJobService:Clean">
+        <MSBuild Projects="Application\GenericJob.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GenericJob:Make" DependsOnTargets="GenericJobService:Make">
+        <MSBuild Projects="Application\GenericJob.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GenericJobService">
+        <MSBuild Projects="Service\GenericJobService.dproj"/>
+    </Target>
+    <Target Name="GenericJobService:Clean">
+        <MSBuild Projects="Service\GenericJobService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GenericJobService:Make">
+        <MSBuild Projects="Service\GenericJobService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GenericJob;GenericJobService"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GenericJob:Clean;GenericJobService:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GenericJob:Make;GenericJobService:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
