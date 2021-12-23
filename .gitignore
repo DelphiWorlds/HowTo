@@ -72,6 +72,8 @@ LaunchScreen.TemplateiOS
 .DS_Store
 *.deployproj
 *.res
+*.template.java
+*.class
 AndroidManifest.template.xml
 Entitlement.TemplateOSX.xml
 Entitlement.TemplateiOS.xml
