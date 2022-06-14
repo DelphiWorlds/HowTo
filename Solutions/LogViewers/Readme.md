@@ -14,7 +14,7 @@ Log.d('XYZ: Creating an instance of TFoo');
 
 This code includes the prefix `XYZ:` only to help provide something relatively unique to filter on. It does not have any other meaning and can be omitted. 
 
-If you use [Kastri](https://github.com/DelphiWorlds/Kastri), you can use methods of `TOSLog` from the `DW.OSLog` unit. The `TOSLog.d` method is the equivalent of `Log.d`, however `TOSLog` also has methods for emitting Warning level (`TOSLog.w`) and Error level (`TOSLog.e`) logs, which will categorize the log on the relevant platforms. These methods can be used in an Android service because they're not [dependent on the FMX.Types unit](https://quality.embarcadero.com/browse/RSP-17857).
+If you use [Kastri](https://github.com/DelphiWorlds/Kastri), you can use methods of `TOSLog` from the [DW.OSLog](https://github.com/DelphiWorlds/Kastri/blob/master/Core/DW.OSLog.pas) unit. The `TOSLog.d` method is the equivalent of `Log.d`, however `TOSLog` also has methods for emitting Warning level (`TOSLog.w`) and Error level (`TOSLog.e`) logs, which will categorize the log on the relevant platforms. These methods can be used in an Android service because they're not [dependent on the FMX.Types unit](https://quality.embarcadero.com/browse/RSP-17857).
 
 
 ## Viewing the logs
@@ -33,7 +33,7 @@ There will be many log calls being emitted, so in order to easily see the releva
 
 ### Android
 
-If you have Android Studio installed, the `Logcat`` function can be used to view logs emitted from your app. Please refer to [the documentation](https://developer.android.com/studio/debug/am-logcat) for details.
+If you have Android Studio installed, the `Logcat` function can be used to view logs emitted from your app. Please refer to [the documentation](https://developer.android.com/studio/debug/am-logcat) for details.
 
 Alternatively, you can use the [command line tool](https://developer.android.com/studio/command-line/logcat).
 
