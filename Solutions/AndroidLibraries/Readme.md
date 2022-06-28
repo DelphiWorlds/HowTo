@@ -12,7 +12,7 @@ The little red "x" marks on the libraries indicate that they are not present. As
 
 `Java type Jcontent_ContextCompat could not be found`
 
-This is because the required Android libraries have not been built into the app.
+This is because the required Android libraries have not been built into the app. **With Delphi 11.1, the app will not compile because it attempts to merge the non-existent .dex files**
 
 ## How to resolve the issue
 
@@ -26,3 +26,12 @@ The process is rather simple:
 3. Save the project
 4. Do a Clean (right-click the **project** and click Clean)
 5. Do a Build (right-click the **project** and click Build)
+
+## Android apps with a service
+
+If the app still crashes on startup, and you have a service with the application, it may be due to changes in the Delphi service code. In which case, follow these steps:
+
+1. In the root of the source folder for the service, delete the `.template.java` files. This will cause Delphi to recreate them when you:
+2. Rebuild the project
+
+
