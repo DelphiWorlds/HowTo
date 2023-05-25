@@ -30,9 +30,6 @@ implementation
 
 {$R *.fmx}
 
-uses
-  DW.OSLog;
-
 { TForm1 }
 
 constructor TForm1.Create(AOwner: TComponent);
