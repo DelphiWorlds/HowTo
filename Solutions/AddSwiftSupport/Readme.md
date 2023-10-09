@@ -2,7 +2,7 @@
 
 ## Description
 
-Some newer third-party iOS SDKs such as Firebase require files from Xcode for compatibility with Swift. This is done via the SDK Manager in Delphi
+Some newer third-party iOS SDKs such as Firebase from v9.0.0 onwards require files from Xcode for compatibility with Swift. This is done via the SDK Manager in Delphi
 
 ## Steps
 
