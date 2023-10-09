@@ -14,8 +14,9 @@ If you wish to leverage iOS and macOS frameworks other than those that support i
    <img src="../../Screenshots/AddFrameworkItem.png" alt="logo" height="300"><br>
    Note that this screenshot is just using CoreBluetooth **as an example**. Ensure you enter the correct name for the desired framework. 
 
-5. Click the Update Local File Cache button. Respond to any overwrite prompts by clicking: Yes To All.
-6. Make sure you click Save once it is done, so that the SDK framework entries are updated.
+5. Repeat steps 3-4 for any additional frameworks
+6. Click the Update Local File Cache button. Respond to any overwrite prompts by clicking: Yes To All.
+7. Make sure you click Save once it is done, so that the SDK framework entries are updated.
 
 Now you’ll be able to build your iOS/macOS project against the framework you’ve added.
 
