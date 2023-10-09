@@ -8,21 +8,22 @@ Some newer third-party iOS SDKs such as Firebase require files from Xcode for co
 
 ### Add the Swift framework from the iOS SDK, and the Swift support files from the Xcode Toolchain
 
-1. In Delphi's SDK Manager, select the relevant iOS SDK. At time of writing, the latest iOS SDK is 17.0.
-2. The Remote Paths list has distinct sections, namely: `Include Paths`, `Library Paths`, and `Framework Paths`. Select the last entry in the `Library Paths` section, and click the Add button:<br><br>
+1. Ensure that PAServer is running on your Mac
+2. In Delphi's SDK Manager, select the relevant iOS SDK. At time of writing, the latest iOS SDK is 17.0.
+3. The Remote Paths list has distinct sections, namely: `Include Paths`, `Library Paths`, and `Framework Paths`. Select the last entry in the `Library Paths` section, and click the Add button:<br><br>
    <img src="../../Screenshots/LibrariesAddButton.png" alt="logo" height="500">
-3. In the Path on remote machine combo edit, enter: `$(SDKROOT)/usr/lib.swift`, in the File mask combo edit enter: `*` , and click OK:<br><br>
+4. In the Path on remote machine combo edit, enter: `$(SDKROOT)/usr/lib.swift`, in the File mask combo edit enter: `*` , and click OK:<br><br>
    <img src="../../Screenshots/AddRemotePathItem.png" alt="logo" height="300">
-4. Repeat step 3 **for each** of the following values for the Path on remote machine combo edit:
+5. Repeat step 3 **for each** of the following values for the Path on remote machine combo edit:
     ```
     $(SDKROOT)/../../../../../Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos
     $(SDKROOT)/../../../../../Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.0/iphoneos
     $(SDKROOT)/../../../../../Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/iphoneos
     ```
 
-5. Click the Update Local File Cache button. Respond to any overwrite prompts by clicking: Yes To All.<br><br>
+6. Click the Update Local File Cache button. Respond to any overwrite prompts by clicking: Yes To All.<br><br>
    <img src="../../Screenshots/PathsAddedUpdateLocalFileCache.png" alt="logo" height="600">
-6. Once the process has has completed, click Save
+7. Once the process has has completed, click Save
 
 ### Move the imported Toolchain files into their correct position
 
