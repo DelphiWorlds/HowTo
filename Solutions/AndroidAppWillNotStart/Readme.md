@@ -39,7 +39,7 @@ Since the datamodule is being created first, consider commenting out the line wh
 
 Commenting out the datamodule creation will at least guarantee that the form is created. If the form shows, then the cause should be in the datamodule. If not, then the cause will be during creation of the form. If so, follow the same rules above about the datamodule.
 
-If you have a `FormCreate` event or overridden `Create` method, consider commenting out the code inside it. This should at least allow the form to show, and you will be able to determine whether or not the cause is in that method. If the cause **is** in that method, and you are still unable to determine the cause in it, consider refactoring that code into its own method, and instead use an application event handler to execute that new method when the `BecameActive` event occurs, e.g.:
+If you have a `FormCreate` event or overridden `Create` method, consider commenting out the code inside it. This should at least allow the form to show, and you will be able to determine whether or not the cause is in that method. If the cause **is** in that method, and you are still unable to determine the cause in it, consider refactoring that code into its own method, and instead use an application event handler to execute that new method when the `BecameActive` event occur - See also the note below regarding [WillBecomeForeground](#WillBecomeForeground) , e.g.: 
 
 ```delphi
 uses
@@ -76,6 +76,10 @@ end;
 You may wish to use this technique regardless of whether you have any problems with the app starting, as it will help diagnose any issues that you may have later.
 
 Hopefully, this will at least have your main form showing, and if an error occurs it should now be visible, rather than the app just hanging. It should also make it easier to diagnose exactly where the cause is if you're running the app via the debugger.
+
+## WillBecomeForeground
+
+**NOTE**: If you are already handling application events, be aware that when the app first starts, it will receive an event for `WillBecomeForeground` **before** `BecameActive`, so any code you execute when handling `WillBecomeForeground` should allow for the possibility that the app is yet to become active
 
 
 
