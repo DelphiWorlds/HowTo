@@ -12,7 +12,7 @@ Some newer third-party iOS SDKs such as Firebase from v9.0.0 onwards require fil
 2. In Delphi's SDK Manager, select the relevant iOS SDK. At time of writing, the latest iOS SDK is 17.0.
 3. The Remote Paths list has distinct sections, namely: `Include Paths`, `Library Paths`, and `Framework Paths`. Select the last entry in the `Library Paths` section, and click the Add button:<br><br>
    <img src="../../Screenshots/LibrariesAddButton.png" alt="logo" height="500">
-4. In the Path on remote machine combo edit, enter: `$(SDKROOT)/usr/lib.swift`, in the File mask combo edit enter: `*` , and click OK:<br><br>
+4. In the Path on remote machine combo edit, enter: `$(SDKROOT)/usr/lib/swift`, in the File mask combo edit enter: `*` , and click OK:<br><br>
    <img src="../../Screenshots/AddRemotePathItem.png" alt="logo" height="300">
 5. Repeat steps 3 to 4 **for each** of the following values for the Path on remote machine combo edit:
     ```
