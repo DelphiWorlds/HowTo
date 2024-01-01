@@ -32,7 +32,9 @@ If the issue is related to code in your project, you should include a minimal, c
 
 Delphi Praxis forums have a version for [English](https://en.delphi-praxis.net) speakers, and [German](https://www.delphipraxis.net)
 
-**Please note that Delphi Praxis have been having problems with spammers (as at Dec 2021), so you may need to be patient for your account to be approved.**
+### Delphi Developers Telegram group
+
+This is a group with over 1,000 members (mostly English speaking), at: https://t.me/delphidevelopers
 
 ### Delphi Worlds Slack workspace
 
