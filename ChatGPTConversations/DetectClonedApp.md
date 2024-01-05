@@ -38,6 +38,6 @@ var
   LInstallerPackage: JString;
 begin
   LInstallerPackage := TAndroidHelper.Context.getPackageManager.getInstallerPackageName(TAndroidHelper.Context.getPackageName);
-  Result := (LInstallerPackage = nil) or LInstallerPackage.equals(StringToJString('com.android.vending'));
+  Result := (LInstallerPackage = nil) or not LInstallerPackage.equals(StringToJString('com.android.vending'));
 end;
 ```
