@@ -1,4 +1,4 @@
-program iOSJoinWifiDemo;
+program JoinWifiDemo;
 
 uses
   System.StartUpCopy,
