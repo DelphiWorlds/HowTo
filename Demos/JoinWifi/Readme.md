@@ -1,4 +1,4 @@
-# iOS Join Wifi demo
+# Join Wifi demo
 
 ## Description
 
