@@ -36,9 +36,92 @@ implementation
 uses
   DW.OSLog,
   Androidapi.JNI.Net, Androidapi.Helpers, Androidapi.JNI.GraphicsContentViewText, Androidapi.JNIBridge, Androidapi.JNI.JavaTypes,
+  Androidapi.JNI.Os, Androidapi.JNI.Java.Net,
   DW.Androidapi.JNI.DWNetworkCallback;
 
 type
+  {$IF CompilerVersion < 36}
+  JMacAddress = interface;
+  JWifiNetworkSpecifier = interface;
+  JWifiNetworkSpecifier_Builder = interface;
+
+  JMacAddressClass = interface(JObjectClass)
+    ['{69E534BB-5A11-4B90-A43F-891350E811E3}']
+    {class} function _GetBROADCAST_ADDRESS: JMacAddress; cdecl;
+    {class} function _GetCREATOR: JParcelable_Creator; cdecl;
+    {class} function _GetTYPE_BROADCAST: Integer; cdecl;
+    {class} function _GetTYPE_MULTICAST: Integer; cdecl;
+    {class} function _GetTYPE_UNICAST: Integer; cdecl;
+    {class} function fromBytes(addr: TJavaArray<Byte>): JMacAddress; cdecl;
+    {class} function fromString(addr: JString): JMacAddress; cdecl;
+    {class} property BROADCAST_ADDRESS: JMacAddress read _GetBROADCAST_ADDRESS;
+    {class} property CREATOR: JParcelable_Creator read _GetCREATOR;
+    {class} property TYPE_BROADCAST: Integer read _GetTYPE_BROADCAST;
+    {class} property TYPE_MULTICAST: Integer read _GetTYPE_MULTICAST;
+    {class} property TYPE_UNICAST: Integer read _GetTYPE_UNICAST;
+  end;
+
+  [JavaSignature('android/net/MacAddress')]
+  JMacAddress = interface(JObject)
+    ['{EA71A3E6-5030-408C-8C98-0D399C41AD39}']
+    function describeContents: Integer; cdecl;
+    function equals(o: JObject): Boolean; cdecl;
+    function getAddressType: Integer; cdecl;
+    function getLinkLocalIpv6FromEui48Mac: JInet6Address; cdecl;
+    function hashCode: Integer; cdecl;
+    function isLocallyAssigned: Boolean; cdecl;
+    function matches(baseAddress: JMacAddress; mask: JMacAddress): Boolean; cdecl;
+    function toByteArray: TJavaArray<Byte>; cdecl;
+    function toOuiString: JString; cdecl;
+    function toString: JString; cdecl;
+    procedure writeToParcel(out_: JParcel; flags: Integer); cdecl;
+  end;
+  TJMacAddress = class(TJavaGenericImport<JMacAddressClass, JMacAddress>) end;
+
+  JWifiNetworkSpecifierClass = interface(JNetworkSpecifierClass)
+    ['{5ABD490B-DE98-44D9-B514-58E0967950DA}']
+    {class} function _GetCREATOR: JParcelable_Creator; cdecl;
+    {class} property CREATOR: JParcelable_Creator read _GetCREATOR;
+  end;
+
+  [JavaSignature('android/net/wifi/WifiNetworkSpecifier')]
+  JWifiNetworkSpecifier = interface(JNetworkSpecifier)
+    ['{70B73F1B-1EA2-40D9-9FFB-9131ED4E9C6A}']
+    function describeContents: Integer; cdecl;
+    function equals(obj: JObject): Boolean; cdecl;
+    function getBand: Integer; cdecl;
+    function hashCode: Integer; cdecl;
+    function toString: JString; cdecl;
+    procedure writeToParcel(dest: JParcel; flags: Integer); cdecl;
+  end;
+  TJWifiNetworkSpecifier = class(TJavaGenericImport<JWifiNetworkSpecifierClass, JWifiNetworkSpecifier>) end;
+
+  JWifiNetworkSpecifier_BuilderClass = interface(JObjectClass)
+    ['{C40D50C1-1BC0-4956-BB23-FEDEBE6B2621}']
+    {class} function init: JWifiNetworkSpecifier_Builder; cdecl;
+  end;
+
+  [JavaSignature('android/net/wifi/WifiNetworkSpecifier$Builder')]
+  JWifiNetworkSpecifier_Builder = interface(JObject)
+    ['{36947CB4-1F66-41C8-8CFD-C8AA0205E7AF}']
+    function build: JWifiNetworkSpecifier; cdecl;
+    function setBand(band: Integer): JWifiNetworkSpecifier_Builder; cdecl;
+    function setBssid(bssid: JMacAddress): JWifiNetworkSpecifier_Builder; cdecl;
+    function setBssidPattern(baseAddress: JMacAddress; mask: JMacAddress): JWifiNetworkSpecifier_Builder; cdecl;
+    function setIsEnhancedOpen(isEnhancedOpen: Boolean): JWifiNetworkSpecifier_Builder; cdecl;
+    function setIsHiddenSsid(isHiddenSsid: Boolean): JWifiNetworkSpecifier_Builder; cdecl;
+    function setSsid(ssid: JString): JWifiNetworkSpecifier_Builder; cdecl;
+    function setSsidPattern(ssidPattern: JPatternMatcher): JWifiNetworkSpecifier_Builder; cdecl;
+    function setWpa2EnterpriseConfig(enterpriseConfig: JWifiEnterpriseConfig): JWifiNetworkSpecifier_Builder; cdecl;
+    function setWpa2Passphrase(passphrase: JString): JWifiNetworkSpecifier_Builder; cdecl;
+    function setWpa3Enterprise192BitModeConfig(enterpriseConfig: JWifiEnterpriseConfig): JWifiNetworkSpecifier_Builder; cdecl;
+    function setWpa3EnterpriseConfig(enterpriseConfig: JWifiEnterpriseConfig): JWifiNetworkSpecifier_Builder; cdecl;
+    function setWpa3EnterpriseStandardModeConfig(enterpriseConfig: JWifiEnterpriseConfig): JWifiNetworkSpecifier_Builder; cdecl;
+    function setWpa3Passphrase(passphrase: JString): JWifiNetworkSpecifier_Builder; cdecl;
+  end;
+  TJWifiNetworkSpecifier_Builder = class(TJavaGenericImport<JWifiNetworkSpecifier_BuilderClass, JWifiNetworkSpecifier_Builder>) end;
+  {$ENDIF}
+  
   TWifiConnector = class;
 
   TNetworkCallbackDelegate = class(TJavaLocal, JDWNetworkCallbackDelegate)
