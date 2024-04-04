@@ -12,9 +12,12 @@ type
 
   TWifiConnectStatusProc = reference to procedure(const Status: TWifiConnectStatus; const Msg: string);
 
+  TSSIDPattern = (Prefix, Suffix, RegEx);
+
   IWifiConnector = interface(IInterface)
     ['{D036EB90-6B1A-4BE0-A5F1-440F860E44FF}']
-    procedure ConnectWifi(const ASSID, APassword: string; const AHandler: TWifiConnectStatusProc);
+    procedure ConnectWifi(const ASSID, APassword: string; const AHandler: TWifiConnectStatusProc); overload;
+    procedure ConnectWifi(const ASSID, APassword: string; const APattern: TSSIDPattern; const AHandler: TWifiConnectStatusProc); overload;
   end;
 
   TForm1 = class(TForm)
@@ -145,13 +148,15 @@ type
     FConnectivityManager: JConnectivityManager;
     FStatusHandler: TWifiConnectStatusProc;
     procedure DoWifiConnectStatus(const AStatus: TWifiConnectStatus; const AMsg: string);
+    procedure DoConnectWifi(const ABuilder: JWifiNetworkSpecifier_Builder; const APassword: string);
   protected
     procedure NetworkAvailable(const ANetwork: JNetwork); cdecl;
     procedure NetworkLost(const ANetwork: JNetwork); cdecl;
     procedure NetworkUnavailable; cdecl;
   public
     { IWifiConnector }
-    procedure ConnectWifi(const ASSID, APassword: string; const AHandler: TWifiConnectStatusProc);
+    procedure ConnectWifi(const ASSID, APassword: string; const AHandler: TWifiConnectStatusProc); overload;
+    procedure ConnectWifi(const ASSID, APassword: string; const APattern: TSSIDPattern; const AHandler: TWifiConnectStatusProc); overload;
   public
     constructor Create;
     destructor Destroy; override;
@@ -196,21 +201,37 @@ begin
   inherited;
 end;
 
-procedure TWifiConnector.ConnectWifi(const ASSID, APassword: string; const AHandler: TWifiConnectStatusProc);
+procedure TWifiConnector.DoConnectWifi(const ABuilder: JWifiNetworkSpecifier_Builder; const APassword: string);
 var
-  LSpecifier: JWifiNetworkSpecifier;
   LRequest: JNetworkRequest;
 begin
-  FStatusHandler := AHandler;
-  LSpecifier := TJWifiNetworkSpecifier_Builder.JavaClass.init
-    .setSsid(StringToJString(ASSID))
-    .setWpa2Passphrase(StringToJString(APassword))
-    .build;
   LRequest := TJNetworkRequest_Builder.JavaClass.init
     .addTransportType(TJNetworkCapabilities.JavaClass.TRANSPORT_WIFI)
-    .setNetworkSpecifier(LSpecifier)
+    .setNetworkSpecifier(ABuilder.setWpa2Passphrase(StringToJString(APassword)).build)
     .build;
   FConnectivityManager.requestNetwork(LRequest, FCallbackDelegate.Callback);
+end;
+
+procedure TWifiConnector.ConnectWifi(const ASSID, APassword: string; const APattern: TSSIDPattern; const AHandler: TWifiConnectStatusProc);
+var
+  LMatcher: JPatternMatcher;
+begin
+  FStatusHandler := AHandler;
+  case APattern of
+    TSSIDPattern.RegEx:
+      LMatcher := TJPatternMatcher.JavaClass.init(StringToJString(ASSID), TJPatternMatcher.JavaClass.PATTERN_ADVANCED_GLOB);
+    TSSIDPattern.Suffix:
+      LMatcher := TJPatternMatcher.JavaClass.init(StringToJString(ASSID), TJPatternMatcher.JavaClass.PATTERN_SUFFIX);
+  else
+    LMatcher := TJPatternMatcher.JavaClass.init(StringToJString(ASSID), TJPatternMatcher.JavaClass.PATTERN_PREFIX);
+  end;
+  DoConnectWifi(TJWifiNetworkSpecifier_Builder.JavaClass.init.setSsidPattern(LMatcher), APassword);
+end;
+
+procedure TWifiConnector.ConnectWifi(const ASSID, APassword: string; const AHandler: TWifiConnectStatusProc);
+begin
+  FStatusHandler := AHandler;
+  DoConnectWifi(TJWifiNetworkSpecifier_Builder.JavaClass.init.setSsid(StringToJString(ASSID)), APassword);
 end;
 
 procedure TWifiConnector.NetworkAvailable(const ANetwork: JNetwork);
@@ -294,7 +315,10 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
   if FWifiConnector = nil then
     FWifiConnector := TWifiConnector.Create;
-  FWifiConnector.ConnectWifi('YourSSID', 'YourPassword',
+  // The following variant needs the *exact* SSID
+  // FWifiConnector.ConnectWifi('YourSSID', 'YourPassword',
+  // This variant finds SSIDs with a prefix that matches the string
+  FWifiConnector.ConnectWifi('Your', 'YourPassword', TSSIDPattern.Prefix,
     procedure(const AStatus: TWifiConnectStatus; const AMsg: string)
     begin
       case AStatus of
