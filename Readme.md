@@ -60,9 +60,13 @@ If you would like to join the Delphi Worlds Slack workspace, [please visit this 
 
 Development of this How To repository can be helped along with [Github Sponsorship](https://github.com/sponsors/DelphiWorlds), so please consider sponsoring today!
 
-Alternatively, you might like to make a donation via PayPal: 
+Alternatively, you might like to make a donation via Stripe*: 
 
-[![paypal](https://www.paypalobjects.com/en_AU/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=CGHWQ28MKBGAA)
+<a href="https://donate.stripe.com/5kAdRecDkf7J30k3cc">
+    <img src="https://kinsta.com/wp-content/uploads/2018/05/stripe-donate-button-1-1-360x180.png" height="50">
+</a>
+
+(*Donations were previously being made via another service which I no longer use, as they were unable to keep my funds secure. My apologies for any inconvenience)
 
 Please star this repo by clicking the Star box in the top right corner if you find it useful!
 
