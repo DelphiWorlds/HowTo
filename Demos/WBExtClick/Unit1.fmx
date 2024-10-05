@@ -1,0 +1,193 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 742
+  ClientWidth = 486
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ClickWBButton: TButton
+    Align = Bottom
+    Margins.Left = 4.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Position.X = 4.000000000000000000
+    Position.Y = 633.000000000000000000
+    Size.Width = 478.000000000000000000
+    Size.Height = 43.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Click WebBrowser'
+    TextSettings.Trimming = None
+    OnClick = ClickWBButtonClick
+  end
+  object URLLayout: TLayout
+    Align = Top
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Size.Width = 486.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object URLEdit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 0
+      Text = 'https://en.delphipraxis.net/topic/12144-mouse-cursor/'
+      Size.Width = 392.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object GoButton: TButton
+      Align = Right
+      Margins.Left = 6.000000000000000000
+      Position.X = 402.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Go'
+      TextSettings.Trimming = None
+      OnClick = GoButtonClick
+    end
+  end
+  object Memo: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Bottom
+    Margins.Top = 4.000000000000000000
+    Position.Y = 553.000000000000000000
+    Size.Width = 486.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 482.000000000000000000
+    Viewport.Height = 72.000000000000000000
+  end
+  object Layout1: TLayout
+    Align = Bottom
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Margins.Bottom = 12.000000000000000000
+    Position.Y = 680.000000000000000000
+    Size.Width = 486.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object LeftButton: TButton
+      Align = Left
+      Margins.Right = 8.000000000000000000
+      Position.X = 4.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Left'
+      TextSettings.Trimming = None
+      OnClick = LeftButtonClick
+    end
+    object UpButton: TButton
+      Align = Left
+      Margins.Right = 8.000000000000000000
+      Position.X = 92.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Up'
+      TextSettings.Trimming = None
+      OnClick = UpButtonClick
+    end
+    object DownButton: TButton
+      Align = Left
+      Margins.Right = 8.000000000000000000
+      Position.X = 180.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Down'
+      TextSettings.Trimming = None
+      OnClick = DownButtonClick
+    end
+    object RightButton: TButton
+      Align = Left
+      Margins.Right = 8.000000000000000000
+      Position.X = 268.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Right'
+      TextSettings.Trimming = None
+      OnClick = RightButtonClick
+    end
+  end
+  object WebBrowserLayout: TLayout
+    Align = Client
+    Size.Width = 486.000000000000000000
+    Size.Height = 516.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object WebBrowser: TWebBrowser
+      Align = Contents
+      Size.Width = 486.000000000000000000
+      Size.Height = 516.000000000000000000
+      Size.PlatformDefault = False
+      WindowsEngine = IEOnly
+    end
+    object MouseImage: TNativeImage
+      BackgroundColor = claNull
+      Image.PNG = {
+        89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+        DE0000000473424954080808087C086488000003A249444154789CED9ACB4B55
+        5114C67FE6AB07243D2645E2A8880475D0B041989274951E10657F40A3B46138
+        09CA06D1CC8179851EA45012E83FD0A82C9AF4181418411145684519D72E5296
+        36D8F7C2EDDCB58FE7B1CFB967D3F96021DCB3F7DADFFACEBDCBFDED7320458A
+        1429FE6354BB5C6B03CE03196011781707A1A4A00D55F44A49CC00FD40430579
+        C586ABFC5B7C692C0059A0A562EC62809B00A5310DF4027595A1191DDAF12640
+        31668141A0B11264A34015EA37EF478415600998023A0A39AC463FFE05288DD7
+        C0396073DCC44DA101D5F09C852D0B9FB9C50F6014688D97BE1964918BEA0586
+        9005728B27C069605D9C458441337221D9C2F58DA8825E68C6E9620EB80C34C5
+        5447284C535E401ED8E418B70FB80BFC12C6EBE20F700FE821C14DB317997CBF
+        66FC3654F3FBA099675DD3AC053E221376BB6B75C071D41DF6D338178131D476
+        3C311844267BC0E3FCDD58DE34B723FFB6277DE609DA343F9180A6394539B1DF
+        214859D7343B34A40643E62D36CDF79AFC896A9A2F05229F817A03B9AD689A3A
+        7F70D2F03A896D9A0DA8BDBD73E10711AED7877F673A070CE07EE41718A39A45
+        A33C21AA42FDCB9D44596EAF425C88824CAB66B1ACDB2483D8093CD77070C69B
+        A84848FE6081E80E4CEB81C3C06DFCF585A711F1D1FA833E836BD40287805BC0
+        77CD7A6EB184122D12D4A11A8D73D119C26D506A804EE01AF055C8EFB5010E13
+        C3A975587F50C41AD4AE700875B81AA4E86FA8BD400FEA9B130B1A913BB21F7F
+        B017782BE4F012F3C04DA08B188B7642F2074BC00E0F73ABF15F7C0E1847DD69
+        13BBCFD0D0F9838B1EE6EED7CC75461E98008E016B8DB237802AE015E5A46759
+        FD69D18830AF341E012780F55110378920FEA00665A2DC04F8097447C6DA2082
+        F8834E61BCD522F8F507D735E3752244B6A131851664F223C2D85AE44DCE34E5
+        EF245825C243CA894BFE20238C5B411D867461B1085EFDC19830260F6C285CB7
+        56042FFEA01ED9D84C3872592BC22564D2ED85EB4734D78F0AB9AC1461357F70
+        47B896437F8667A5083A7FB00BF930637C957CD689A0F307CF349FF778C86995
+        087EDE2F9AC7BBABB34A84B37813E086CFBCD688A0F307CE3818207737AA589D
+        089990DC8D41E70F8AF185E027396E22E480AD61889B82EEF941314643E67713
+        21310E52F207CECD5118E844683690DB084E21173F87B9E77619D4D7BE98FB8A
+        A1BC46A0F307C386D7D982DA4FEC319CD7080628DF1526E655FB481E1F3BF0B8
+        F0B709750C7E06B81FC3BA2952A4489122458A14AEF80B6D5E427CF3316F8900
+        00000049454E44AE426082}
+      Position.X = 27.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end
