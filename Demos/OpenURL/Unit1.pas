@@ -42,11 +42,8 @@ begin
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
-var
-  LURL: NSURL;
 begin
-  LURL := TNSURL.Wrap(TNSURL.OCClass.URLWithString(StrToNSStr('https://www.embarcadero.com')));
-  SharedApplicationEx.openURL(LURL, nil, OpenURLCompletion);
+  SharedApplicationEx.openURL(StrToNSUrl('https://www.embarcadero.com'), nil, OpenURLCompletion);
 end;
 
 procedure TForm1.OpenURLCompletion(success: Boolean);
