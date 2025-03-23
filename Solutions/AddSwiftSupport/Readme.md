@@ -34,6 +34,8 @@ Some newer third-party iOS SDKs such as Firebase from v9.0.0 onwards require fil
 
 ### Move the imported Toolchain files into their correct position
 
+**NOTE: These next steps are for Delphi 12.2 or earlier.** The problem has been resolved in Delphi 12.3
+
 Due to an issue with Delphi (in all versions to at least 12.2), the Toolchain folders that were just added are not imported correctly. These are the steps to correct that.
 
 1. In Windows file Explorer, go to: `C:\Users\(username)\Documents\Embarcadero\Studio\SDKs\iPhoneOS(version).sdk` (or `iPhoneSimulator(version)` if you're importing to a simulator SDK) where (username) is the logged in username, and (version) is the version of the iOS SDK you are working with
