@@ -1,0 +1,69 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 624
+  ClientWidth = 388
+  Padding.Left = 6.000000000000000000
+  Padding.Top = 6.000000000000000000
+  Padding.Right = 6.000000000000000000
+  Padding.Bottom = 6.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Align = Bottom
+    Position.X = 6.000000000000000000
+    Position.Y = 586.000000000000000000
+    Size.Width = 376.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Button1'
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object Layout1: TLayout
+    Align = Client
+    Margins.Bottom = 6.000000000000000000
+    Size.Width = 376.000000000000000000
+    Size.Height = 574.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object ListBox1: TListBox
+      Align = Top
+      Margins.Bottom = 6.000000000000000000
+      Size.Width = 376.000000000000000000
+      Size.Height = 329.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      OnItemClick = ListBox1ItemClick
+      Viewport.Width = 372.000000000000000000
+      Viewport.Height = 325.000000000000000000
+    end
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Size.Width = 376.000000000000000000
+      Size.Height = 239.000000000000000000
+      Size.PlatformDefault = False
+      object Label1: TLabel
+        Align = Center
+        Size.Width = 206.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'Could not display image'
+        Visible = False
+        TabOrder = 0
+      end
+    end
+  end
+end
