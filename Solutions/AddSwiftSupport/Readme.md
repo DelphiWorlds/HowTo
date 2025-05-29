@@ -29,7 +29,7 @@ Some newer third-party iOS SDKs such as Firebase from v9.0.0 onwards require fil
    ```
 
 6. Click the Update Local File Cache button. Respond to any overwrite prompts by clicking: Yes To All.<br><br>
-   <img src="../../Screenshots/PathsAddedUpdateLocalFileCache.png" alt="logo" height="600">
+   <img src="../../Screenshots/PathsAddedUpdateLocalFileCache.png" alt="logo" height="250">
 7. Once the process has has completed, click Save
 
 ### Move the imported Toolchain files into their correct position
