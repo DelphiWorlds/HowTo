@@ -25,20 +25,18 @@ implementation
 
 {$R *.fmx}
 
+{$IF Defined(ANDROID)}
 uses
-  Androidapi.JNI.GraphicsContentViewText, Androidapi.Helpers, Androidapi.JNI.JavaTypes,
-  FMX.Platform.Android,
-  DW.Android.Helpers;
+  DW.Androidapi.JNI.DWUtility, DW.Android.Helpers;
+{$ENDIF}
 
 constructor TForm1.Create(AOwner: TComponent);
-var
-  LIntent: JIntent;
 begin
   inherited;
+  {$IF Defined(ANDROID)}
   TAndroidHelperEx.HookUncaughtExceptionHandler;
-  LIntent := MainActivity.getIntent;
-  if LIntent.getBooleanExtra(StringToJString('CRASHED'), False) then
-    Memo.Text := JStringToString(LIntent.getStringExtra(StringToJString('TRACE')));
+  Memo.Text := TAndroidHelperEx.GetCrashTrace;
+  {$ENDIF}
 end;
 
 destructor TForm1.Destroy;
@@ -49,7 +47,9 @@ end;
 
 procedure TForm1.CrashButtonClick(Sender: TObject);
 begin
+  {$IF Defined(ANDROID)}
   TJDWUtility.JavaClass.crashTest;
+  {$ENDIF}
 end;
 
 end.
