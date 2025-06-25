@@ -12,6 +12,11 @@ It's possible to set up a symbolic link (symlink) to redirect access from the ol
      ```bash
      ls -l ~/Library/MobileDevice/Provisioning\ Profiles/
      ```
+   - If the directory does not exist, create the parent folder:
+     ```bash
+     mkdir -p ~/Library/MobileDevice
+     ```
+     ..and skip to step 3.
 
 2. **Remove the Old Directory** (if it exists):
    - If the `Provisioning Profiles` folder exists in `~/Library/MobileDevice/`, delete it (after backing up any important files):
