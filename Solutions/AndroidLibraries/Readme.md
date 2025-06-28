@@ -8,7 +8,11 @@ If you create an app with Delphi 10.4.2, open it with Delphi 11, then open the P
 
 <img src="../../Screenshots/ProjectManagerAndroidLibrariesOutOfDate.png" alt="logo" height="450">
 
-The little red "x" marks on the libraries indicate that they are not present. As mentioned above, the Android libraries that Delphi depends on have been changed. When you run the application you may receive a message like:
+The little red "x" marks on the libraries indicate that they are not present. As mentioned above, the Android libraries that Delphi depends on have been changed. 
+
+Similarly, for a project built for a later version of Delphi, e.g. Delphi 12, if you open it with an earlier version, e.g. Delphi 11, you will see the same issue.
+
+When you run the application you may receive a message like:
 
 `Java type Jcontent_ContextCompat could not be found`
 
