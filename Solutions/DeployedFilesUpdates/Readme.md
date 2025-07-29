@@ -32,6 +32,8 @@ In this case, the file `Test.txt` will be copied to a subfolder called `Test`, u
 
 Of course, `CopyDocuments` should be called **before access to the updated files is required**, e.g. an appropriate place might be in the `OnCreate` event of the main form.
 
+Note that the above examples are just that: **examples**. In your project, you will have used Deployment Manager to deploy files to the device. For those files that you wish to always be updated, call `CopyDocuments` in the manner described above.
+
 ## Warning
 
 **Do not use this method if the file in the location that it is deployed to is changed by the app, as those changes will be lost**. That is unless the changes can actually be safely discarded.
