@@ -18,7 +18,7 @@ And for `it.lproj`:
 NSCameraUsageDescription = "Questa app ha bisogno di accesso alla telecamera per fare foto.";
 ```
 
-And so on for each language. Please note that the **case of the `InfoPlist.strings` files are important**, as are the names of the `.lproj` folders.
+And so on for each language. Each string entry needs to be terminated by a `;`, even if there is just one. Please note that the **case of the `InfoPlist.strings` file names are important**, as are the names of the `.lproj` folders.
 
 Each of the `.lproj` folders need to be deployed to the root folder of the iOS target, e.g.:
 
