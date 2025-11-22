@@ -11,7 +11,7 @@ Depending on the message, this can be caused by one of two scenarios:
 1. An SDK framework needs to be added to the SDK import
 2. The SDK import did not complete correctly
 
-If the path contains: `/System/Library/PrivateFrameworks`, it is more likely to be scenario 2, otherwise scenario 1 probably applies, in which case see [this link]([/System/Library/PrivateFrameworks](https://github.com/DelphiWorlds/HowTo/tree/main/Solutions/AddSDKFrameworks#readme)).
+If the path contains: `/System/Library/PrivateFrameworks`, it is more likely to be scenario 2, otherwise scenario 1 probably applies, in which case see [this link](https://github.com/DelphiWorlds/HowTo/tree/main/Solutions/AddSDKFrameworks#readme).
 
 For **scenario 2**, please follow these steps:
 
