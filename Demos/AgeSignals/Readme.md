@@ -4,7 +4,13 @@
 
 Demonstrates how to use the Age Signals API on Android
 
+NOTE: This demo relies on files from the [Kastri]() repo.
+
 ## Configuration
+
+### Search path
+
+As per the description, this demo relies on files from Kastri. **You will need to add (or modify in the case of the demo) the project search path to include the `API` and `Core`folders of your local copy of Kastri**
 
 ### Android
 
