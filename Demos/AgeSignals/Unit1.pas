@@ -38,7 +38,9 @@ uses
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  // FetchAgeSignals;  // Should be available from 01-JAN-2026
+  // This was going to be available Jan 1, 2026, however it has now been delayed:
+  //   https://support.google.com/googleplay/android-developer/answer/16569691
+  // FetchAgeSignals;
   FetchFakeAgeSignals;
 end;
 

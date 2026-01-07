@@ -4,7 +4,13 @@
 
 Demonstrates how to use the Age Signals API on Android
 
-NOTE: This demo relies on files from the [Kastri]() repo.
+NOTE: This demo relies on files from the [Kastri](https://github.com/DelphiWorlds/Kastri) repo.
+
+## Status
+
+**The "real" Age Signals service should have been live on Jan 1st, 2026, however [this has now been delayed](https://support.google.com/googleplay/android-developer/answer/16569691).** 
+
+Until the service goes licve, it's necessary to use the "fake" API calls, as per the demo
 
 ## Configuration
 
@@ -25,8 +31,5 @@ To add it to the project, in Project Manager:
 3. Right-click the Libraries node and click Add..
 4. Select the relevant .jar file and click Open
 
-## Notes
-
-**The "real" Age Signals service should be live on Jan 1st, 2026. Until then, it's necessary to use the "fake" API calls, as per the demo**
 
 
