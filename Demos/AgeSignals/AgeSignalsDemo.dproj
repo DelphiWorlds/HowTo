@@ -318,10 +318,6 @@
             <Form>Form1</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <JavaReference Include="..\..\..\ThirdParty\Android\age-signals-0.0.2.jar">
-            <ContainerId>ClassesdexFile</ContainerId>
-            <Disabled/>
-        </JavaReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

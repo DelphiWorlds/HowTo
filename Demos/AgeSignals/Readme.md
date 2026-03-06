@@ -16,13 +16,13 @@ Until the service goes live, it's necessary to use the "fake" API calls, as per 
 
 ### Search path
 
-As per the description, this demo relies on files from Kastri. **You will need to add (or modify in the case of the demo) the project search path to include the `API` and `Core`folders of your local copy of Kastri**
+As per the description, this demo relies on files from Kastri. **You will need to add (or modify in the case of the demo) the project search path to include the `API` and `Core` folders of your local copy of Kastri**
 
 ### Android
 
-If constructing **your own project** (has already been configured in the demo project), you will need to add the Age Signals library to the Libraries node under the Android 32-bit platform in Project Manager. 
+You will need to add the Age Signals library to the Libraries node under the Android 32-bit platform in Project Manager. 
 
-As at 19-DEC-2025, this is: `age-signals-0.0.2.jar` in the ThirdParty/Android folder
+As at 07-MAR-2026, this is: `age-signals-0.0.3.jar` in the ThirdParty\Android folder of Kastri
 
 To add it to the project, in Project Manager:
 
