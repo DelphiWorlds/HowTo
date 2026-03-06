@@ -88,8 +88,8 @@ end;
 
 procedure TForm1.CheckAgeSignalsSuccessHandler(const AResult: JObject);
 const
-  cAgeStatusCaptions: array[0..4] of string = (
-    'Verified', 'Supervised', 'Supervised Approval Pending', 'Supervised Approval Denied', 'Unknown'
+  cAgeStatusCaptions: array[0..5] of string = (
+    'Verified', 'Supervised', 'Supervised Approval Pending', 'Supervised Approval Denied', 'Unknown', 'Declared'
   );
 var
   LResult: JAgeSignalsResult;
