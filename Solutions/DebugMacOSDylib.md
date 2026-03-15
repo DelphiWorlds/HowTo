@@ -16,16 +16,17 @@ If you have an existing project (or more accurately: a project _group_ containin
 2. In the Deployment Manager for the **app**, add the `.dSYM` file for the **dylib** to the deployment, with a `Remote Path` value of: `..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\`, e.g.:
    
    <img src="../Screenshots/macOSDebugDylibDeployment.png" alt="logo" height="250">
-3. In the Delphi menu, click `Run|Load Process`
-4. Select `Remote`
-5. In the `Remote Path` edit, enter `./` followed by the application file including the `.app` extension
-6. Click the ellipsis for `Remote Host`, and select the connection profile for the Mac, e.g.:
+3. In the Delphi menu, click `Run|Deploy` to deploy the app to the Mac
+4. Click `Run|Load Process`
+5. Select `Remote`
+6. In the `Remote Path` edit, enter `./` followed by the application file including the `.app` extension
+7. Click the ellipsis for `Remote Host`, and select the connection profile for the Mac, e.g.:
    
    <img src="../Screenshots/macOSDebugDylibSelectProfile.png" alt="logo" height="200">
-7. In the `After Load` section, select the `Run` radio button. This is an example of the completed dialog:
+8. In the `After Load` section, select the `Run` radio button. This is an example of the completed dialog:
    
    <img src="../Screenshots/macOSDebugDylibLoadRemote.png" alt="logo" height="550">
-8. Click `Load`
+9. Click `Load`
 
 This should start the app on the Mac and launch the Delphi debugger on the Windows machine.
 
