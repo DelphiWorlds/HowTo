@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DB061C32-058B-4B65-BDE3-118F45B86B8E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="macOSApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Dylib\macOSPackage.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="macOSApp">
+        <MSBuild Projects="macOSApp.dproj"/>
+    </Target>
+    <Target Name="macOSApp:Clean">
+        <MSBuild Projects="macOSApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="macOSApp:Make">
+        <MSBuild Projects="macOSApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="macOSPackage">
+        <MSBuild Projects="Dylib\macOSPackage.dproj"/>
+    </Target>
+    <Target Name="macOSPackage:Clean">
+        <MSBuild Projects="Dylib\macOSPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="macOSPackage:Make">
+        <MSBuild Projects="Dylib\macOSPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="macOSApp;macOSPackage"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="macOSApp:Clean;macOSPackage:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="macOSApp:Make;macOSPackage:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
