@@ -33,7 +33,7 @@ You will need to:
 
 ## iOS Simulator OpenSSL binaries
 
-These have been included in this demo, in the `Lib\iOSSimulator` folder, and were built for OpenSSL 3.6.2. At present, these are not normally included in the [TaurusTLS distribution](https://github.com/TaurusTLS-Developers/OpenSSL-Distribution/releases), however they may be in the future.
+These have been included in this demo, in the `Lib\iOSSimulator` folder, and were built for OpenSSL 3.6.2. They are however also included in the [TaurusTLS distribution](https://github.com/TaurusTLS-Developers/OpenSSL-Distribution/releases).
 
 If you are building your own project, **you will need these static libraries** (`libcrypto.a` and `libssl.a`) in your project search path
 
