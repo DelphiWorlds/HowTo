@@ -85,6 +85,8 @@ info.plist.TemplateIOS.xml
 **/Android64/Release
 **/iOSDevice64/Debug/
 **/iOSDevice64/Release/
+**/iOSSimARM64/Debug/
+**/iOSSimARM64/Release/
 **/OSX64/Debug/
 **/OSX64/Release/
 **/Win32/Debug/
