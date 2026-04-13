@@ -11,7 +11,9 @@ You will need to:
 - Clone or download [TaurusTLS](https://github.com/TaurusTLS-Developers/TaurusTLS)
 - Either create a User Override called `TaurusTLS` (IDE options: IDE > User System Overrides) that points to the TaurusTLS source 
   **OR** update the search path in the project options to include a path to the TaurusTLS source
-- Modify `TaurusTLSCompilerDefines.inc` so that it defines `STATICLOAD_OPENSSL` for iOS Simulator by commenting out an `IFDEF` thus:
+- ~~Modify `TaurusTLSCompilerDefines.inc` so that it defines `STATICLOAD_OPENSSL` for iOS Simulator by commenting out an `IFDEF` thus:~~
+  
+  TaurusTLS has now been updated, so this modification is **NO LONGER REQUIRED**
   ```delphi
   {$IFDEF IOS}
     // Support for 64-bit ARM iOS Simulator was added in Delphi 11.2
